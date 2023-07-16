@@ -9,17 +9,20 @@
 
  ```mermaid
 stateDiagram-v2
-    [*] --> 语音录入
+    BOT --> 语音录入
     语音录入 --> 飞书语音转文字
     飞书语音转文字 --> QA_FewShot
     QA_FewShot --> OpenAI_Summary
     OpenAI_Summary --> 操作指令_JSON
     操作指令_JSON --> 读写多维表格
 
-    [*] --> 票据图片
+    BOT --> 票据图片
     票据图片 --> 阿里云票据OCR
     阿里云票据OCR --> QA_FewShot
- 
+
+    读取多维表格 --> 获取已有数据库信息 
+    获取已有数据库信息 --> QA_FewShot
+
 ```
 
 ## 最终效果
