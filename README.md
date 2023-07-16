@@ -92,12 +92,50 @@ prompt := `你是仓库管理员,产品数据库有如下商品：【` + product
 	5. 可能会出现部分错别字，比如把 “5斤” 写成 “5金”。`
 ```
 
-## 部署注意
+## 复现部署
+1. 导入MVP环境的[多维表格至本地](https://fork-way.feishu.cn/base/Norqbd3anazOMlsceoEcbeIMn2g?table=tblghsq6TY3XktYG&view=vewr4Kwn8O)
+2. 填写对应的配置文件
+   ```json5
+	#飞书BOT配置
+	APP_ID: cli_a4172ca48e7b9013
+	APP_SECRET: tWFwzQNzkD..
+	APP_ENCRYPT_KEY: 39XCQUA00uqeDC..
+	APP_VERIFICATION_TOKEN: CYyoRCIz..
+	BOT_NAME: ChatGPT
+	
+	# openai 配置
+	OPENAI_MODEL: gpt-3.5-turbo
+	# openAI 最大token数 默认为2000
+	OPENAI_MAX_TOKENS: 2000
+	OPENAI_KEY: sk-zTeWCJSr...
+	
+	# mvp多维表格 
+	BITABLE_HOST: fork-way.feishu.cn
+	BITABLE_APP_TOKEN: Norqbd3anazOMlsceoEcbeIMn2g
+	#产品数据库tableID
+	PRODUCT_BITABLE_ID: tblVY2JwWJfbzWzS
+	#供应商tableID
+	SUPPLIER_BITABlE_ID: tbltrRO7DJGXd1ZJ
+	#目标写入tableID及其视图ID
+	RECEIPT_BITABLE_ID: tblghsq6TY3XktYG
+	RECEIPT_BITABLE_VIEW: vewr4Kwn8O
+	
+	# 阿里云 OCR https://ai.aliyun.com/ocr/invoice
+	ALI_ACCESSKEY_ID: LTAI5tEBvzfgfjZSy...
+	ALI_ACCESSKEY_SECRET: DxpKnI64q31630....
+	
+	# 服务器配置
+	HTTP_PORT: 9001
+	HTTPS_PORT: 9002
+	
+	```
 
-此应有整体基于飞书-OpenAI项目改造完成，初原项目配置之外，还需下列额外操作
+3. 此应用整体基于飞书-OpenAI项目改造完成，初[原项目配置](https://github.com/ConnectAI-E/Feishu-OpenAI#%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4)之外，还需下列额外操作
 ```
 事件权限-查看、评论、编辑和管理多维表格 
 进入多维表格-更多-添加文档应用-添加此应用
 ```
 
 <img width="420" alt="image" src="https://github.com/ConnectAI-E/Base-EasyWrite/assets/50035229/d2c0511d-0df2-4e74-a3de-7e7a889f9d96">
+
+4. 输入测试文本：`收到了大白菜 30斤 一共100块`
