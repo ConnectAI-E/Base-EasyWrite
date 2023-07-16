@@ -94,7 +94,7 @@ prompt := `你是仓库管理员,产品数据库有如下商品：【` + product
 
 ## 复现部署
 1. 导入MVP环境的[多维表格至本地](https://fork-way.feishu.cn/base/Norqbd3anazOMlsceoEcbeIMn2g?table=tblghsq6TY3XktYG&view=vewr4Kwn8O)
-2. 填写对应的配置文件
+2. 复制一份`config.yaml`文件，填写对应的配置
     ```json5
 	#飞书BOT配置
 	APP_ID: cli_a4172ca48e7b9013
@@ -138,3 +138,29 @@ prompt := `你是仓库管理员,产品数据库有如下商品：【` + product
 <img width="420" alt="image" src="https://github.com/ConnectAI-E/Base-EasyWrite/assets/50035229/d2c0511d-0df2-4e74-a3de-7e7a889f9d96">
 
 4. 输入测试文本：`收到了大白菜 30斤 一共100块`
+
+## 下一步思考
+
+如何让数据录入的场景更加通用，从而减少定制化的需求呢？
+
+下一步一定是OA-Agent~
+
+以录入助手为例，其本身分为两个agent：
+```
+1.数据收集agent，作用：产生约定的json字段，他下辖
+- 语音收集agent -作用：自然语音-->约定的json字段
+- 票据收集agent-作用：票据图片-->约定的json字段
+2.多维表格录入agent，作用：自然语言或者约定的指令-->读写多维表格
+```
+
+那我们在定制什么呢? 我们其实就在定制QA
+
+所有的Agent都接受QA作为历史学习经验的积累，才可以上岗
+
+Agent的学习方式现在看来至少包括：
+- 提示词 Prompt、
+- few-short的QA、
+- context-window向量索引上下文的QA
+- 利用Lora微调模型本身
+
+
