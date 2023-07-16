@@ -163,4 +163,8 @@ Agent的学习方式现在看来至少包括：
 - context-window向量索引上下文的QA
 - 利用Lora微调模型本身
 
+## 更多交流
+<div align='left'>
+   <img align="left" src="https://github.com/ConnectAI-E/.github/assets/110169811/2c3cbe7d-6792-4fc2-9ddb-f21fbbdf8faf" width="220"/>
+</div>
 
