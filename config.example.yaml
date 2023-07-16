@@ -1,0 +1,30 @@
+APP_ID: cli_a4172ca48e7b9013
+APP_SECRET: tWFwzQNzkD..
+APP_ENCRYPT_KEY: 39XCQUA00uqeDC..
+APP_VERIFICATION_TOKEN: CYyoRCIz..
+# 请确保和飞书应用管理平台中的设置一致
+BOT_NAME: ChatGPT
+OPENAI_MODEL: gpt-3.5-turbo
+# openAI 最大token数 默认为2000
+OPENAI_MAX_TOKENS: 2000
+# openai
+OPENAI_KEY: sk-zTeWCJSr...
+
+# 多维表格
+BITABLE_HOST: fork-way.feishu.cn
+BITABLE_APP_TOKEN: Norqbd3anazOMlsceoEcbeIMn2g
+#产品数据库tableID
+PRODUCT_BITABLE_ID: tblVY2JwWJfbzWzS
+#供应商tableID
+SUPPLIER_BITABlE_ID: tbltrRO7DJGXd1ZJ
+#目标写入tableID及其视图ID
+RECEIPT_BITABLE_ID: tblghsq6TY3XktYG
+RECEIPT_BITABLE_VIEW: vewr4Kwn8O
+
+# 阿里云 OCR https://ai.aliyun.com/ocr/invoice
+ALI_ACCESSKEY_ID: LTAI5tEBvzfgfjZSy...
+ALI_ACCESSKEY_SECRET: DxpKnI64q31630....
+
+# 服务器配置
+HTTP_PORT: 9001
+HTTPS_PORT: 9002
